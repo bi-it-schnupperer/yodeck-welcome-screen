@@ -14,24 +14,46 @@
 
   <style>
 
+    /*Verfügbare Farben */
+
+    /* Die Farbe einsetzen:
+    z.B: background: var(--blue); */
+       /* Base */
+    --light: #e6e6e6;
+    --dark: #212529;
+
+    /* Primary Colors */
+    --blue: #008cba;
+    --green: #28a745;
+    --cyan: #17a2b8;
+    --yellow: #ffc107;
+    --red: #d9534f;
+
+    /* Additional Colors */
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --orange-dark: #fd7e14;
+    --teal: #20c997;
+    --lime: #84cc16;
+    
     .welcome-card {
       /* Hintergrundfarbe festlegen */ 
-      background: rgb(179, 179, 179); /*Kommentar: Hier kannst du die Farbe ändern*/
+      background: var(--blue); /*Kommentar: Hier kannst du die Farbe ändern*/
       /* Textfarbe */
-      color: #ffffff; /*Kommentar: Hier kannst du die Farbe ändern*/
+      color: var(--light) /*Kommentar: Hier kannst du die Farbe ändern*/
     
     }
 
     h1 {
      /* Titel: Schriftgrösse */
       font-size: 50px;
-      /* Titel: Schriftstärke */
+      /* Titel: Schriftstärke -> in 100er Schritten ver*/
       font-weight: 600;
     }
 
     .name {
      /* Schriftgrösse */
-      font-size: 45px;
+      font-size: 50px;
      /* Schriftstärke */
       font-weight: 600;
       /* Farbe*/
