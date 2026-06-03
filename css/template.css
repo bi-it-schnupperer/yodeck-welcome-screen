@@ -4,58 +4,105 @@
      margin: 0;
 }
  body {
-     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.png); 
+    /*
+     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.png);
      background-repeat: no-repeat;
      background-position: center center;
      background-size: cover;
+     */
      font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-.logo-top-right {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-
-    width: 180px; /* Größe anpassen */
-    height: auto;
-
-    z-index: 1000;
-}
-
- .welcome-card {
-     backdrop-filter: blur(10px);
-     border-radius: 1.5rem;
-     padding: 4rem 5rem;
-     color: #fff;
-}
  .screen {
      height: 100vh;
 }
- .welcome-card {
-     backdrop-filter: blur(10px);
-     border-radius: 1.5rem;
-     padding: 4rem 5rem;
-     box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-     max-width: 900px;
+
+/* ===========================
+   Layout
+   =========================== */
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    padding: 3rem;
 }
+
+/* ===========================
+   Linke Spalte
+   =========================== */
+
+.info-column {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-box {
+    background: #555555;
+    backdrop-filter: blur(8px);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.info-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.info-box p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ===========================
+   Welcome Card Anpassung
+   =========================== */
+
+.welcome-card {
+    width: 900px;
+    max-width: 900px;
+    min-height: 700px;
+
+    backdrop-filter: blur(10px); 
+    border-radius: 1.5rem; 
+    padding: 4rem 5rem; 
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
  .icon {
      font-size: 5rem;
      margin-bottom: 1.5rem;
-     color: #ffffff;
+     color: darkgoldenrod;
+    
 }
  h1 {
      font-size: 3.5rem;
      font-weight: 700;
 }
  .name {
+     font-size: 3rem;
+     font-weight: 600;
      margin-top: 1rem;
-    
+     color: #ffe082;
 }
  .subtitle {
      font-size: 1.8rem;
      margin-top: 3rem;
      opacity: 0.95;
 }
+
  .fade-in {
      animation: fadeIn 1.8s ease-out;
 }
