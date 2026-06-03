@@ -88,23 +88,23 @@
 }
 
  .icon {
-     font-size: 5rem;
+     font-size: 7rem;
      margin-bottom: 1.5rem;
      color: darkgoldenrod;
     
 }
  h1 {
-     font-size: 3.5rem;
+     font-size: 5.5rem;
      font-weight: 700;
 }
  .name {
-     font-size: 3rem;
+     font-size: 5rem;
      font-weight: 600;
      margin-top: 1rem;
      color: #ffe082;
 }
  .subtitle {
-     font-size: 1.8rem;
+     font-size: 3.8rem;
      margin-top: 3rem;
      opacity: 0.95;
 }
