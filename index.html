@@ -12,93 +12,111 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-<style>
+  <style>
 
-    /* Verfügbare Farben */
+    /* ===========================
+   CSS Variables
+   =========================== */
+:root {
 
-    /* Die Farbe einsetzen:
-       z.B: background: var(--blue);
-    */
+    /* Hintergrundfarben*/ 
+  --default: #F2F2F2;
+  --red: #E66446;
+  --orange: #EB9646;
+  --blue: #8CAADC;
+  --green: #87C85A;
+  --yellow: #E6BE6E;
+  --darkgray: #9C9E9F;
 
-    :root {
-        /* Base */
-        --light: #e6e6e6;
-        --dark: #212529;
+   /* Textfarben*/ 
+  --dark: #222;
+  --white:#FFF;
+  --red: #E66446;
+ 
+    }
 
-        /* Primary Colors */
-        --blue: #008cba;
-        --green: #28a745;
-        --cyan: #17a2b8;
-        --yellow: #ffc107;
-        --red: #d9534f;
 
-        /* Additional Colors */
-        --purple: #6f42c1;
-        --pink: #e83e8c;
-        --orange-dark: #fd7e14;
-        --teal: #20c997;
-        --lime: #84cc16;
+    body {
+      /* Hintergrundfarbe für den Screen festlegen */
+        background-color: var(--default);
     }
 
     .welcome-card {
-        /* Hintergrundfarbe */  /*Kommentar: Hier kannst du die Farbe ändern*/
-        background: var(--light);
-
-        /* Textfarbe */  /*Kommentar: Hier kannst du die Farbe ändern*/
-        color: var(--blue);
-    }
-
-    h1 {
-        /* Titel: Schriftgrösse */
-        font-size: 50px;
-
-        /* Titel: Schriftstärke */
-        font-weight: 600;
+      /* Hintergrundfarbe festlegen */
+      background: var(--orange);
+      /* Textfarbe */
+      color: var(--white);
+    
     }
 
     .name {
-        /* Schriftgrösse */
-        font-size: 50px;
-
-        /* Schriftstärke */
-        font-weight: 600;
-
-        /* Farbe */
-        color: rgb(10, 0, 97);
+      /* Farbe*/
+      color: var(--dark)
     }
 
-</style>
+  </style>
 </head>
 
 <body>
 
-  <!-- Logo oben rechts -->
-   <img src="img/logo.png" class="logo-top-right" width="180" alt="Logo">
+  <div class="container-fluid screen">
+    <div class="content-wrapper fade-in">
 
-  <div class="container-fluid screen d-flex align-items-center justify-content-center">
-    <div class="fade-in">
+      <!-- LINKER BEREICH -->
+      <div class="info-column">
 
+        <div class="info-box">
+          <h2>Götti</h2>
+          <p>
+            Petra Musterfrau
+          </p>
+           <p>Text</p>
+        </div>
+
+        <div class="info-box">
+          <h2>Arbeitstage</h2>
+          <p>
+            Mo. bis Mi.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h2>Arbeitszeit</h2>
+          <p>
+            8 - 15 Uhr
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h2>Pausen</h2>
+          <ul>
+            <li>Morgen: xxx</li>
+            <li>Mittag: xxx</li>
+            <li>Nachmittag: xxx</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- RECHTER BEREICH -->
       <div class="welcome-card">
-
 
         <div class="icon">
           <i class="bi bi-person"></i>
         </div>
 
         <h1>
-          <!-- Hier Titel einfügen: z.B. Herzlich Willkommen -->
-          Herzlich Willkommen in der ESPAS
+          Willkommen
         </h1>
 
         <div class="name">
-          <!-- Hier Name des nächsten Schnupperers einfügen-->
-          Parthipan Prithika
-        
+          Max Mustermann
         </div>
 
         <div class="subtitle">
-          <!-- Welcome Text: z.B. Schön, dass du heute als <strong>Schnupperer</strong> bei uns bist. -->
-         Schön, dass du heute als Schnupperer bei uns bist.
+          Schön, dass du heute als
+          <strong>Schnupperer</strong>
+          bei uns bist
         </div>
 
       </div>
