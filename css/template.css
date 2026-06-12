@@ -42,11 +42,9 @@
 }
 
 .info-box {
-    background: #555555;
     backdrop-filter: blur(8px);
     border-radius: 1.2rem;
     padding: 2rem;
-    color: white;
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
