@@ -4,108 +4,58 @@
      margin: 0;
 }
  body {
-    /*
-     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.png);
+     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.png); 
      background-repeat: no-repeat;
      background-position: center center;
      background-size: cover;
-     */
      font-family: "Segoe UI", system-ui, sans-serif;
 }
 
+.logo-top-right {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: 180px; /* Größe anpassen */
+    height: auto;
+
+    z-index: 1000;
+}
+
+ .welcome-card {
+     backdrop-filter: blur(10px);
+     border-radius: 1.5rem;
+     padding: 4rem 5rem;
+     color: #fff;
+}
  .screen {
      height: 100vh;
 }
-
-/* ===========================
-   Layout
-   =========================== */
-
-.content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    width: 100%;
-    padding: 3rem;
+ .welcome-card {
+     backdrop-filter: blur(10px);
+     border-radius: 1.5rem;
+     padding: 4rem 5rem;
+     box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+     max-width: 900px;
 }
-
-/* ===========================
-   Linke Spalte
-   =========================== */
-
-.info-column {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.info-box {
-    backdrop-filter: blur(8px);
-    border-radius: 1.2rem;
-    padding: 2rem;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.info-box h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.info-box p {
-    font-size: 1.7rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.info-box li {
-    font-size: 1.7rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* ===========================
-   Welcome Card Anpassung
-   =========================== */
-
-.welcome-card {
-    width: 900px;
-    max-width: 900px;
-    min-height: 700px;
-
-    backdrop-filter: blur(10px); 
-    border-radius: 1.5rem; 
-    padding: 4rem 5rem; 
-    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
  .icon {
-     font-size: 8rem;
+     font-size: 5rem;
      margin-bottom: 1.5rem;
-     
-     
+     color: #ffffff;
 }
  h1 {
-     font-size: 5rem;
+     font-size: 3.5rem;
      font-weight: 700;
 }
  .name {
-     font-size: 4.5rem;
-     font-weight: 600;
      margin-top: 1rem;
+    
 }
  .subtitle {
-     font-size: 3.3rem;
+     font-size: 1.8rem;
      margin-top: 3rem;
      opacity: 0.95;
 }
-
  .fade-in {
      animation: fadeIn 1.8s ease-out;
 }
@@ -118,4 +68,72 @@
          opacity: 1;
          transform: translateY(0);
     }
+}
+
+
+.screen {
+    height: 100vh;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 4%;              /* Leicht reduzierter Randabstand für mehr Arbeitsfläche */
+    box-sizing: border-box;
+}
+
+/* Die Container-Spalte links wird BREITER gemacht */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;                /* Etwas kompakterer Abstand zwischen den Boxen */
+    width: 55%;                 /* HIER ERHÖHT: Linke Spalte nutzt jetzt 55% der Bildschirmbreite */
+    max-height: 92vh;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+/* Allgemeine Definition für alle Boxen */
+.welcome-card {
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    background: #c92020;
+    color: #e6e6e6;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Die Boxen auf der linken Seite werden SCHMALER (Kompakter) */
+.left-column .welcome-card {
+    padding: 2.8rem 3rem;       /* HIER REDUZIERT: Macht die Boxen deutlich flacher/schmaler */
+    display: flex;
+    flex-direction: row;        /* Icon, Titel und Text nebeneinander statt untereinander */
+    align-items: center;        /* Zentriert den Inhalt vertikal in der flachen Box */
+    gap: 2rem;                  /* Abstand zwischen den Elementen in der Box */
+}
+
+/* Korrektur für die Icons in den flachen linken Boxen */
+.left-column .welcome-card .icon {
+    font-size: 3rem;            /* Etwas kleineres Icon, da die Box flacher ist */
+    margin-bottom: 0;           /* Entfernt den alten Abstand nach unten */
+}
+
+/* Korrektur für die Titel in den linken Boxen */
+.left-column .welcome-card h1 {
+    font-size: 2.2rem;          /* Etwas kleinere Schrift für die flache Box */
+    margin: 0;
+    min-width: 160px;           /* Gibt der Uhrzeit einen festen Platz */
+}
+
+/* Korrektur für den Text in den linken Boxen */
+.left-column .welcome-card .subtitle {
+    font-size: 1.4rem;          /* Etwas kleinere Schrift */
+    margin-top: 0;              /* Entfernt den alten Abstand nach oben */
+}
+
+/* Die rechte Hauptbox bleibt gross und quadratisch */
+.right-box {
+    width: 38%;                 /* HIER REDUZIERT: Rechte Box wird schmaler, um links Platz zu machen */
+    max-width: 700px;
+    padding: 4rem 4rem;
 }
