@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -12,133 +13,131 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <style>
+<style>
 
-    /* ===========================
-   CSS Variables
-   =========================== */
-:root {
+    /* Verfügbare Farben */
 
-    /* Hintergrundfarben*/ 
-  --lightblue: #61c6ed;
-  --red: #E66446;
-  --violet: #fc90ea;
-  --blue: #8CAADC;
-  --green: #87C85A;
-  --yellow: #E6BE6E;
-  --darkgray: #9C9E9F;
+    /* Die Farbe einsetzen:
+       z.B: background: var(--blue);
+    */
 
-   /* Textfarben*/ 
-  --black: #000;
-  --white:#FFF;
-  --red: #E66446;
- 
-    }
+    :root {
+        /* Base */
+        --light: #e6e6e6;
+        --dark: #212529;
 
+        /* Primary Colors */
+        --blue: #008cba;
+        --green: #28a745;
+        --cyan: #17a2b8;
+        --yellow: #ffc107;
+        --red: #d9534f;
 
-    body {
-      /* 1. Hintergrundfarbe für den Screen festlegen */ 
-        background-color: var(--lightblue);
+        /* Additional Colors */
+        --purple: #6f42c1;
+        --pink: #e83e8c;
+        --orange-dark: #fd7e14;
+        --teal: #20c997;
+        --lime: #84cc16;
     }
 
     .welcome-card {
-      /* 2. Hintergrundfarbe festlegen */ 
-      background: var(--violet);
-      /* 3. Textfarbe festlegen */ 
-      color: var(--white);
+        /* Hintergrundfarbe */
+        background: #c92020;
+
+        /* Textfarbe */
+        color: #e6e6e6;
+
+        margin: left 50px;
     }
 
-    .icon {
-      /* 4. Textfarbe festlegen */ 
-      color: var(--red);
+    h1 {
+        /* Titel: Schriftgrösse */
+        font-size: 50px;
 
+        /* Titel: Schriftstärke */
+        font-weight: 600;
     }
 
-    .info-box {
-   /* 5. Boxfarbe festlegen - linke Reihe */ 
-    background: var(--darkgray);
- /* 6. Textfarbe festlegen (Infoboxen - linke Reihe) */ 
-    color: var(--black);
-   }
+    .name {
+        /* Schriftgrösse */
+        font-size: 50px;
 
+        /* Schriftstärke */
+        font-weight: 600;
 
-  </style>
+        /* Farbe */
+        color: rgb(255, 204, 0);
+    }
+
+</style>
 </head>
+
+
 
 <body>
 
-  <div class="container-fluid screen">
-    <div class="content-wrapper fade-in">
+<!-- Logo oben rechts -->
+<!-- Logo oben rechts -->
+<img src="img/logo.png" class="logo-top-right" width="180" alt="Logo">
 
-      <!-- LINKER BEREICH -->
-      <div class="info-column">
-
+<div class="container-fluid screen fade-in">
     
-        <div class="info-box">
-          <h2>Götti</h2>
-          <!-- 7. Gemäss Fachperson -->
-          <p>Gemäss Fachperson
-            
-          </p>
-        </div>
-
-        <div class="info-box">
-          <h2>Arbeitstage</h2>
-          <p>
-           <!-- 8. Gemäss Fachperson -->
-            Mo. bis Mi.
-          </p>
-        </div>
-
-        <div class="info-box">
-          <h2>Arbeitszeit</h2>
-          <p>
-             <!-- 9. Gemäss Fachperson -->
-            8 - 15 Uhr
-          </p>
-        </div>
-
-        <div class="info-box">
-          <h2>Pausen</h2>
-          <ul>
-             <!-- 10. Gemäss Fachperson -->
-            <li>Morgen: 10:00 - 10:15</li>
-             <!-- 11. Gemäss Fachperson -->
-            <li>Mittag: 11:55 - 13:00</li>
-          </ul>
-        </div>
-
+    <!-- LINKE SEITE: 4 flache, aber breitere Boxen untereinander -->
+    <div class="left-column">
+      
+      <!-- Box 1 -->
+      <div class="welcome-card">
+        <div class="icon"><i class="bi bi-clock"></i></div>
+        <h1>08:00 Uhr</h1>
+        <div class="subtitle">Begrüssung & Rundgang durch das Gebäude</div>
       </div>
 
-      <!-- RECHTER BEREICH -->
+      <!-- Box 2 -->
       <div class="welcome-card">
+        <div class="icon"><i class="bi bi-laptop"></i></div>
+        <h1>09:30 Uhr</h1>
+        <div class="subtitle">Einführung in unsere internen Systeme</div>
+      </div>
 
-        <div class="icon">
-          <i class="bi bi-person"></i>
-        </div>
+      <!-- Box 3 -->
+      <div class="welcome-card">
+        <div class="icon"><i class="bi bi-cup-hot"></i></div>
+        <h1>12:00 Uhr</h1>
+        <div class="subtitle">Gemeinsames Mittagessen im Team</div>
+      </div>
 
-        <h1>
-           <!-- 12. Gemäss Fachperson -->
-          Willkommen
-        </h1>
-
-        <div class="name">
-           <!-- 13. Gemäss Fachperson -->
-          Miro Kaminski
-        </div>
-
-         <!-- 14. Gemäss Fachperson -->
-        <div class="subtitle">
-          Schön, dass du heute als
-          <strong>Schnupperer</strong>
-          bei uns bist!
-        </div>
-
+      <!-- Box 4 -->
+      <div class="welcome-card">
+        <div class="icon"><i class="bi bi-chat-dots"></i></div>
+        <h1>15:00 Uhr</h1>
+        <div class="subtitle">Feedbackgespräch & Abschluss des Tages</div>
       </div>
 
     </div>
-  </div>
+
+    <!-- RECHTE SEITE: Deine grosse Willkommens-Box -->
+    <div class="welcome-card right-box">
+      <div class="icon">
+        <i class="bi bi-person"></i>
+      </div>
+      <h1>Herzlich Willkommen in der ESPAS</h1>
+      <div class="name">Amir" Farah Bakhsh</div>
+      <div class="subtitle">
+        Schön, dass du heute als Schnupperer bei uns bist.
+      </div>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+</div>
 
 </body>
 
 </html>
+
+
