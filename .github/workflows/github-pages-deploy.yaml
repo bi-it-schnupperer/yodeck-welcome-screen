@@ -17,12 +17,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        id: checkout
+        uses: actions/checkout@v5
+
       - name: Upload Build Artifact
         id: build
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
-      - name: Deploy
+      - name: Deploy Page
         id: deploy
         uses: actions/deploy-pages@v4
