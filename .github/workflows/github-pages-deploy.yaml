@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v4
-        with:
-          path: /
 
       - name: Deploy
         uses: actions/deploy-pages@v4
