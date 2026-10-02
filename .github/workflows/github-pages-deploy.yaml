@@ -4,8 +4,9 @@ on:
   push:
     branches-ignore:
       - main
-    paths:
-      - index.html
+
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   deploy:
@@ -14,7 +15,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
-    
+
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
