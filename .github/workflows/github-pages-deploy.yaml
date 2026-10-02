@@ -1,6 +1,11 @@
 name: Deploy to GitHub Pages
 
-on: push
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - index.html
 
 jobs:
   deploy:
